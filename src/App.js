@@ -4,8 +4,30 @@ import './App.css';
 
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      suggestions: []
+    };
+  }
+  componentDidMount() {
+    var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
+	targetUrl = 'https://pz3bm5zpgh.execute-api.us-east-1.amazonaws.com/dev/suggestions'
+    fetch(proxyUrl + targetUrl )
+      .then(res => res.json())
+      .then(
+		(result) => {
+			this.setState({
+            			suggestions: JSON.parse(result.message)
+          		});
+		}
+	);
+  }
+
   render() {
-    var suggestion = {
+    const {suggestions} = this.state;
+    
+    var sugg = {
       	name: "McLean Sport & Health",
 	distance: "3.4 miles",
 	category: "Activity",
@@ -23,7 +45,9 @@ class App extends Component {
         <p className="App-intro">
         </p>
 	<div className="Suggestion-grid">
-		<SuggestionCard data={suggestion} />
+		{suggestions.map(suggestion => (
+			<SuggestionCard data={suggestion} />	
+		) )} 
 	</div>
       </div>
     );
@@ -34,10 +58,10 @@ class SuggestionCard extends React.Component {
   render() {
     return (
       <div className="Suggestion-card">
-	<p className="Suggestion-dist"><i className="fa fa-map-marker"> {this.props.data.distance}</i></p>
+	<p className="Suggestion-dist"><i className="fa fa-map-marker"></i> {this.props.data.distance} miles</p>
         <p className="Suggestion-name">{this.props.data.name}</p>
-        <p className="Suggestion-data-type">Based on your {this.props.data.metric} data</p>
-        <p className="Suggestion-offer">{this.props.data.offer}% OFF</p>
+        <p className="Suggestion-data-type">Based on your {this.props.data.categories} data</p>
+        <p className="Suggestion-offer">10% OFF</p>
       </div>
     );
   }
