@@ -42,18 +42,21 @@
 .Suggestion-dist {
 	text-align: right;	
 	margin: unset;
+	font-family: 'Fira Sans', sans-serif;
 }
 
 .Suggestion-data-type {
 	margin: unset;
 	margin-top: 10px;
 	text-align: left;	
+	font-family: 'Fira Sans', sans-serif;
 }
 
 .Suggestion-offer {
 	margin: unset;
 	margin-top: 10px;
 	text-align: left;	
+	font-family: 'Fira Sans', sans-serif;
 }
 
 
