@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  background-color: #5494a5;
 }
 
 .App-logo {
@@ -9,17 +8,29 @@
 }
 
 .App-header {
-  background-color: #fff;
+  background-color: #14c9d2;
   height: 150px;
   padding: 20px;
   color: white;
-  border-bottom: 10px solid #206276;
+  border-bottom: 10px solid #195365;
 }
 
 .App-title {
   font-size: 4.5em;
-  color: #0095b2;
+  color: #fff;
   font-family: 'Montserrat', sans-serif;
+}
+
+.Smart {
+  color: #fff;
+}
+
+.Health {
+  color: #195365;
+}
+
+.Guide {
+  color: #000;
 }
 
 .App-intro {
@@ -33,7 +44,7 @@
 
 .Suggestion-card {
 	width: 350px;
-	border: 2px solid #206276;
+	border: 3px solid #195365;
 	border-radius: 5px;
 	padding: 10px;
 	background-color: #fff;
@@ -43,31 +54,48 @@
 .Suggestion-dist {
 	text-align: right;	
 	margin: unset;
-	font-family: 'Fira Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 .Suggestion-data-type {
 	margin: unset;
-	margin-top: 10px;
-	text-align: left;	
-	font-family: 'Fira Sans', sans-serif;
+	margin-bottom: 10px;
+	text-align: right;	
+	font-family: 'Roboto', sans-serif;
 }
 
 .Suggestion-offer {
 	margin: unset;
 	margin-top: 10px;
-	text-align: left;	
-	font-family: 'Fira Sans', sans-serif;
+	float: left;	
+	color: #1bb51b;
+	font-weight: bold;
+	font-family: 'Roboto', sans-serif;
 }
 
-
+.Suggestion-image {
+	width: 35px;
+	height: 35px;
+	float: left;
+	margin-right: 10px;
+}
 
 .Suggestion-name {
 	font-family: 'Raleway', sans-serif;
-	font-size: 30px;
+	font-size: 25px;
 	color: #206276;
 	margin: unset;
+	margin-bottom: 25px;
 	text-align: left;	
+}
+
+.Suggestion-cta {
+	float: right;
+	font-family: 'Raleway', sans-serif;
+}
+
+.fa-map-marker {
+	color: red;
 }
 
 @keyframes App-logo-spin {
