@@ -28,6 +28,7 @@
 
 .Suggestion-grid {
 	display: grid;
+	grid-template-columns: auto auto auto;
 }
 
 .Suggestion-card {
