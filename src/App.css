@@ -9,7 +9,7 @@
 
 .App-header {
   background-color: #14c9d2;
-  height: 150px;
+  height: 200px;
   padding: 20px;
   color: white;
   border-bottom: 10px solid #195365;
@@ -17,6 +17,7 @@
 
 .App-title {
   font-size: 4.5em;
+  margin-top: 40px;
   color: #fff;
   font-family: 'Montserrat', sans-serif;
 }
