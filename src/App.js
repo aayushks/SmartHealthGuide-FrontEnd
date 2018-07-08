@@ -58,10 +58,14 @@ class SuggestionCard extends React.Component {
   render() {
     return (
       <div className="Suggestion-card">
-	<p className="Suggestion-dist"><i className="fa fa-map-marker fa-2x"></i> {this.props.data.distance} mi</p>
-        <img className="Suggestion-image" src={this.props.data.icon} /><p className="Suggestion-name">{this.props.data.name}</p>
-        <p className="Suggestion-data-type">Based on your {this.props.categoryList[this.props.data.metric]}</p>
         <p className="Suggestion-offer">{this.props.data.discount}% Off</p>
+	{ this.props.data.metric != 3 ?
+	<p className="Suggestion-dist"><i className="fa fa-map-marker fa-2x"></i> {this.props.data.distance} mi</p>
+	:
+	<p className="Suggestion-dist Suggestion-dist-hide"><i className="fa fa-map-marker fa-2x"></i> {this.props.data.distance} mi</p>
+        }
+	<img className="Suggestion-image" src={this.props.data.icon} /><p className="Suggestion-name">{this.props.data.name}</p>
+        <p className="Suggestion-data-type">Based on your {this.props.categoryList[this.props.data.metric]}</p>
         <Button bsStyle="primary" className="Suggestion-cta">SUBSCRIBE</Button>
       </div>
     );

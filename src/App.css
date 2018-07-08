@@ -63,16 +63,19 @@
 	font-family: 'Roboto', sans-serif;
 }
 
+.Suggestion-dist-hide {
+	visibility: hidden;
+}
+
 .Suggestion-data-type {
 	margin: unset;
 	margin-bottom: 10px;
-	text-align: right;	
+	text-align: left;	
 	font-family: 'Roboto', sans-serif;
 }
 
 .Suggestion-offer {
 	margin: unset;
-	margin-top: 10px;
 	float: left;	
 	color: #1bb51b;
 	font-weight: bold;
@@ -94,6 +97,7 @@
 	margin-left:45px;
 	margin-bottom: 20px;
 	text-align: left;	
+	height: 85px;
 }
 
 .Suggestion-cta {
